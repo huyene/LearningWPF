@@ -42,5 +42,28 @@ namespace WpfApp1
                 UseShellExecute = true
             });
         }
+
+        private void myButton_Click(object sender, RoutedEventArgs e)
+        {
+            myLabel.Foreground = Brushes.SteelBlue;
+            myLabel.FontSize += 1;
+        }
+
+        private void myButton_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            myLabel.FontSize -= 2;
+        }
+
+        private void myButton_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            myLabel.Content = "A";
+            myLabel.Foreground = Brushes.SteelBlue;
+        }
+
+        private void myButton_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            myLabel.Content = "Hello world";
+            myLabel.Foreground= Brushes.Black;
+        }
     }
 }

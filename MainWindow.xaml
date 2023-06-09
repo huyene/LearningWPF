@@ -17,7 +17,7 @@
                 <AccessText Text="Message" FontSize="16"/>
             </StackPanel>
         </Label>-->
-        <TextBox 
+        <!--<TextBox 
             Margin="16" 
             FontSize="20" 
             AcceptsReturn="True" 
@@ -28,6 +28,18 @@
             Foreground="Magenta"
             Text="Hello world!"
             IsReadOnly="True"
-            ></TextBox>
+            />-->
+        <Button x:Name="myButton" Width="50" Height="20" MouseDoubleClick="myButton_MouseDoubleClick" 
+                Click="myButton_Click" Content="Click me" 
+                Background="Orange"
+                Foreground="#00FF00"
+                MouseEnter="myButton_MouseEnter"
+                MouseLeave="myButton_MouseLeave"
+                ToolTip="Button do button thing"
+                FontWeight="Bold"
+                />
+        <Label FontSize="16" x:Name="myLabel">
+            Hello world
+        </Label>
     </StackPanel>
 </Window>
