@@ -5,41 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Hello world" Height="200" Width="300">
+        Title="Hello world" Height="250
+        " Width="445">
     <StackPanel>
-        <!--<TextBlock Margin="16">
-            Click this: 
-            <Hyperlink x:Name="GoogleHyperlink" RequestNavigate="GoogleClick" NavigateUri="http://www.google.com">Google</Hyperlink>
-        </TextBlock>-->
-        <!--<Label Margin="16,16,16,0" BorderThickness="3" BorderBrush="Black">
-            <StackPanel Orientation="Horizontal">
-                <Image Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_377947.png&amp;f=1&amp;nofb=1&amp;ipt=a18049fe19e14f5e53a2125f4c40f15332ccc27c7756fc3c54ab2e5d3f3cceba&amp;ipo=images" Height="16"/>
-                <AccessText Text="Message" FontSize="16"/>
-            </StackPanel>
-        </Label>-->
-        <!--<TextBox 
-            Margin="16" 
-            FontSize="20" 
-            AcceptsReturn="True" 
-            TextWrapping="Wrap" 
-            SpellCheck.IsEnabled="True"
-            Language="en-US"
-            Background="Aqua"
-            Foreground="Magenta"
-            Text="Hello world!"
-            IsReadOnly="True"
-            />-->
-        <Button x:Name="myButton" Width="50" Height="20" MouseDoubleClick="myButton_MouseDoubleClick" 
-                Click="myButton_Click" Content="Click me" 
-                Background="Orange"
-                Foreground="#00FF00"
-                MouseEnter="myButton_MouseEnter"
-                MouseLeave="myButton_MouseLeave"
-                ToolTip="Button do button thing"
-                FontWeight="Bold"
-                />
-        <Label FontSize="16" x:Name="myLabel">
-            Hello world
-        </Label>
+        <Label FontWeight="Bold">Best president gamer</Label>
+        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="ObamaRadioButton" GroupName="Gamer" Unchecked="ObamaRadioButton_Unchecked" Checked="ObamaRadioButotn_Checked" >
+            <WrapPanel>
+                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2F71%2F7195eaed3158b6b2a2e03e6101c1dd5c0702b2e1_full.jpg&amp;f=1&amp;nofb=1&amp;ipt=51be77bb3fb71d52a9f8ec40f84c2ba5ed4a5a59442c400c09e576bd630e2b51&amp;ipo=images"></Image>
+                <Label>Obama</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="BidenRadioButton" Checked="BidenRadioButton_Checked" GroupName="Gamer" >
+            <WrapPanel>
+                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Fnewsfeed%2F002%2F534%2F855%2F657.jpg&amp;f=1&amp;nofb=1&amp;ipt=59e3ba6bdd5b326c0966e0a95ab3e71b60d2e4e7d55646074375ef13eb63de10&amp;ipo=images"></Image>
+                <Label>Biden</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="TrumpRadioButton" GroupName="Gamer" Click="TrumpRadioButton_Click" >
+            <WrapPanel>
+                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.imgflip.com%2F4z01tt.jpg&amp;f=1&amp;nofb=1&amp;ipt=d6d6225b04f38813cf5e56735a7556b14cacdc180aca959c279c3a8eb365a40c&amp;ipo=images"></Image>
+                <Label>Trump</Label>
+            </WrapPanel>
+        </RadioButton>
+        <Label FontWeight="Bold">How mush is iofjoasfd</Label>
+        <RadioButton x:Name="LowButton" GroupName="MushGroup" >Low</RadioButton>
+        <RadioButton x:Name="MidButton" GroupName="MushGroup" >Mid</RadioButton>
+        <RadioButton x:Name="TopButton" GroupName="MushGroup" >Top</RadioButton>
+
     </StackPanel>
 </Window>

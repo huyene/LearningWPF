@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 
 namespace WpfApp1
@@ -16,54 +17,38 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            //GoogleHyperlink.NavigateUri = new Uri("http://www.stackoverflow.com");
-            //TextBlock myTb = new TextBlock();
-            //myTb.Text = "Hello World";
-            //myTb.Inlines.Add(". This is an inline text");
-            //myTb.Inlines.Add(new Run("\nAnd this is a run text")
-            //{
-            //    Foreground = Brushes.Magenta,
-            //    TextDecorations = TextDecorations.Strikethrough
-            //});
-            //Hyperlink link = new Hyperlink();
-            //link.Inlines.Add("Click me");
-            //link.RequestNavigate += GoogleClick;
-            //link.NavigateUri = new Uri("https://google.com");
-            //myTb.Inlines.Add(link);
-            //myTb.Foreground = Brushes.Red;
-
-            //myTb.TextWrapping = TextWrapping.WrapWithOverflow;
-            //this.Content = myTb;
-        }
-        private void GoogleClick(object sender, RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.ToString())
-            {
-                UseShellExecute = true
-            });
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+
+        private void ObamaRadioButotn_Checked(object sender, RoutedEventArgs e)
         {
-            myLabel.Foreground = Brushes.SteelBlue;
-            myLabel.FontSize += 1;
+            var ObamaTextBlock = new TextBlock();
+            AccessText ObamaAccessText = new AccessText();
+            ObamaAccessText.Text = "Obama have ran away";
+            Image ObamaImage = new Image();
+            BitmapImage ObamaBitmapImage = new BitmapImage(new Uri("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmediaproxy.salon.com%2Fwidth%2F960%2Fhttps%3A%2F%2Fmedia.salon.com%2F2011%2F07%2Fdid_obama_kill_the_confidence_fairy.jpg&f=1&nofb=1&ipt=011d5f56f8c270374e5556e11e2a3f67df4731d906603c4ebf953cec1434a58b&ipo=images"));
+            ObamaImage.Source = ObamaBitmapImage;
+            ObamaImage.Height = 30;
+            ObamaTextBlock.Inlines.Add(ObamaImage);
+            ObamaTextBlock.Inlines.Add(ObamaAccessText);
+            ObamaRadioButton.Content = ObamaTextBlock;
         }
 
-        private void myButton_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+
+        private void TrumpRadioButton_Click(object sender, RoutedEventArgs e)
         {
-            myLabel.FontSize -= 2;
+            TrumpRadioButton.FontSize += 1;
         }
 
-        private void myButton_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        private void ObamaRadioButton_Unchecked(object sender, RoutedEventArgs e)
         {
-            myLabel.Content = "A";
-            myLabel.Foreground = Brushes.SteelBlue;
+            ObamaRadioButton.Content = "Obama last name is ...";
+
         }
 
-        private void myButton_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        private void BidenRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            myLabel.Content = "Hello world";
-            myLabel.Foreground= Brushes.Black;
+            TrumpRadioButton.FontSize = 20;
         }
     }
 }
