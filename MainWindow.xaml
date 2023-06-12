@@ -8,29 +8,16 @@
         Title="Hello world" Height="250
         " Width="445">
     <StackPanel>
-        <Label FontWeight="Bold">Best president gamer</Label>
-        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="ObamaRadioButton" GroupName="Gamer" Unchecked="ObamaRadioButton_Unchecked" Checked="ObamaRadioButotn_Checked" >
+        <Label FontWeight="Bold">Toppings</Label>
+        <CheckBox x:Name="CbParent" Checked="CbParent_Checked" Unchecked="CbParent_Unchecked" FontSize="20" VerticalContentAlignment="Center">Check all</CheckBox>
+        <CheckBox x:Name="CbExtraCheese" Margin="15,5" Checked="CbToppingChanged" Unchecked="CbToppingChanged" VerticalContentAlignment="Center" FontSize="15">
             <WrapPanel>
-                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsteamcdn-a.akamaihd.net%2Fsteamcommunity%2Fpublic%2Fimages%2Favatars%2F71%2F7195eaed3158b6b2a2e03e6101c1dd5c0702b2e1_full.jpg&amp;f=1&amp;nofb=1&amp;ipt=51be77bb3fb71d52a9f8ec40f84c2ba5ed4a5a59442c400c09e576bd630e2b51&amp;ipo=images"></Image>
-                <Label>Obama</Label>
+                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi3.ytimg.com%2Fvi%2FMIyY8iAEvZ8%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=f8900c9fe27745171d819476790617cd61f6b84011a70ab9e896d8409d4d7276&amp;ipo=images"></Image>
+                <Label x:Name="LbExtraCheese">Extra cheese</Label>
             </WrapPanel>
-        </RadioButton>
-        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="BidenRadioButton" Checked="BidenRadioButton_Checked" GroupName="Gamer" >
-            <WrapPanel>
-                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fphotos%2Fimages%2Fnewsfeed%2F002%2F534%2F855%2F657.jpg&amp;f=1&amp;nofb=1&amp;ipt=59e3ba6bdd5b326c0966e0a95ab3e71b60d2e4e7d55646074375ef13eb63de10&amp;ipo=images"></Image>
-                <Label>Biden</Label>
-            </WrapPanel>
-        </RadioButton>
-        <RadioButton FontSize="20" VerticalContentAlignment="Center" x:Name="TrumpRadioButton" GroupName="Gamer" Click="TrumpRadioButton_Click" >
-            <WrapPanel>
-                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.imgflip.com%2F4z01tt.jpg&amp;f=1&amp;nofb=1&amp;ipt=d6d6225b04f38813cf5e56735a7556b14cacdc180aca959c279c3a8eb365a40c&amp;ipo=images"></Image>
-                <Label>Trump</Label>
-            </WrapPanel>
-        </RadioButton>
-        <Label FontWeight="Bold">How mush is iofjoasfd</Label>
-        <RadioButton x:Name="LowButton" GroupName="MushGroup" >Low</RadioButton>
-        <RadioButton x:Name="MidButton" GroupName="MushGroup" >Mid</RadioButton>
-        <RadioButton x:Name="TopButton" GroupName="MushGroup" >Top</RadioButton>
+        </CheckBox>
+        <CheckBox x:Name="CbHam" Margin="15,5" Checked="CbToppingChanged" Unchecked="CbToppingChanged" VerticalContentAlignment="Center" FontSize="15">Ham</CheckBox>
+        
 
     </StackPanel>
 </Window>
