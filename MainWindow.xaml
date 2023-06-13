@@ -5,19 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Hello world" Height="250
-        " Width="445">
-    <StackPanel>
-        <Label FontWeight="Bold">Toppings</Label>
-        <CheckBox x:Name="CbParent" Checked="CbParent_Checked" Unchecked="CbParent_Unchecked" FontSize="20" VerticalContentAlignment="Center">Check all</CheckBox>
-        <CheckBox x:Name="CbExtraCheese" Margin="15,5" Checked="CbToppingChanged" Unchecked="CbToppingChanged" VerticalContentAlignment="Center" FontSize="15">
-            <WrapPanel>
-                <Image Height="30" Source="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi3.ytimg.com%2Fvi%2FMIyY8iAEvZ8%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=f8900c9fe27745171d819476790617cd61f6b84011a70ab9e896d8409d4d7276&amp;ipo=images"></Image>
-                <Label x:Name="LbExtraCheese">Extra cheese</Label>
-            </WrapPanel>
-        </CheckBox>
-        <CheckBox x:Name="CbHam" Margin="15,5" Checked="CbToppingChanged" Unchecked="CbToppingChanged" VerticalContentAlignment="Center" FontSize="15">Ham</CheckBox>
-        
+        Title="Hello world" Height="250" Width="445">
+    <StackPanel Margin="10">
+        <Label x:Name="LbUsername" FontSize="25">Username: </Label>
+        <TextBox x:Name="TbUsername" FontSize="25"></TextBox>
+        <Label FontSize="25">Password:</Label>
+        <PasswordBox x:Name="Password" FontSize="25" MaxLength="8" KeyDown="Password_KeyDown" KeyUp="Password_KeyUp"></PasswordBox>
+
 
     </StackPanel>
 </Window>

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -19,35 +20,21 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void CbParent_Checked(object sender, RoutedEventArgs e)
+        private void Password_KeyUp(object sender, KeyEventArgs e)
         {
-            if (CbParent.IsChecked == true) {
-                CbExtraCheese.IsChecked = true;
-                CbHam.IsChecked = true;
-                
-            }
+            if (e.Key == Key.Back) LbUsername.Content = Password.Password;
+            else LbUsername.Content = "a";
+  
         }
 
-
-
-        private void CbToppingChanged(object sender, RoutedEventArgs e)
+        private void Password_KeyDown(object sender, KeyEventArgs e)
         {
-            if (CbHam.IsChecked == true && CbExtraCheese.IsChecked==true) {
-                CbParent.IsChecked = true;
-            }
-            else
+            if(e.Key == Key.Enter)
             {
-                CbParent.IsChecked = false;
+                TbUsername.Text = "Password incorrect";
             }
+            else TbUsername.Text = "What";
         }
 
-        private void CbParent_Unchecked(object sender, RoutedEventArgs e)
-        {
-            if (CbExtraCheese.IsChecked ==true && CbHam.IsChecked == true)
-            {
-                CbExtraCheese.IsChecked=false;
-                CbHam.IsChecked=false;
-            }
-        }
     }
 }
